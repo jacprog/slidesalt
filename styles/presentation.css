@@ -1,0 +1,176 @@
+/*
+	Name: Jacques Favre
+    Date: Mar 23 2017
+    Class: CGS1821.051
+    Assignment: Week 7 
+    Language: HTML 5
+    Purpose: Project3
+    Adding JavaScript and Jquery function
+    Includes: 
+	
+	color: #dce2ea; accent on table
+	color: #eff2f5;  light blue background
+	color: #282828;  very dark gray
+	color: #030303; almost black
+	color: #3d3d3d	: dark grey links when hoover
+	color: #e6e6e6: sides
+	
+*/
+/* reset selector */
+* {
+	margin: 0;
+	padding: 0;
+	}
+
+
+/* the styles for the elements Verdana for header and table */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 100%;
+ 	max-width: 1030px;	/*width on desktop */
+	margin: 0 auto; /* margin top and bottom 0, and automatic on side, 30px make it centerd*/
+	background-color: #dce2ea;  /*all body light blue*/
+	}
+	
+ /* to make sides grey */
+html {
+	background-color: #e6e6e6 ; 
+	background-image: url("../images/sky.jpg");
+
+	}
+/* almost black header */
+ header {
+		background-color: #282828;
+	} 
+
+
+/*the style for the h2 within the header*/
+	header h2 {
+/* 			float: right; */
+			font-size: 200%;
+			color: #dce2ea; /*90% light blue*/
+			padding: .3em 0 .5em 0;
+			max-width: 70%; 
+			margin: 0 0 0 25%;
+			vertical-align: middle;
+			background-color: #282828;
+
+
+	}
+	/* header link same color, syle*/
+	header a {								
+		text-decoration: none;
+		color: #dce2ea;; 
+	}
+
+/* MENU******************************************************************************** */
+	
+	
+/* Main********************************************************************* */
+/* the styles for the main section */
+main {
+	clear: left;
+	font-family: Arial, Helvetica;
+	width: 95%; /* (525/800)*100 = 65.625% minus 5% for margins back to full width for now , no aside*/ 
+	min-height: 400px;
+	padding: 0 2.5% 0 2.5%; /* (20/800)*100 = 2.5%*/
+	background-color: #eff2f5;  /*light blue to tone down back ground instead of white*/
+
+		}
+#black {
+	background-color: black
+}
+
+
+
+/* PARALLAX***************************************************************************** */
+
+#myparallaxslider { /* CSS for specific carousel container called #myparallaxslider. */
+width:105.25%;
+height:600px;
+margin-left: -2.6%;
+}
+
+/* ######### Shared CSS for various parts of slider (in the event of multiple sliders) ######### */
+
+div.parallaxslider{ /* shared CSS for main carousel container */
+background: black url(../icon/ajaxload.gif) center center no-repeat; /* loading gif while caoursel is loading */
+}
+
+div.parallaxslider img.navbutton{ /* CSS for the nav buttons */
+}
+
+div.parallaxslider *{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+div.parallaxslider div.slide{
+position: absolute;
+width: 101%;
+height: 100%;
+top: 0;
+left: 0;
+display: none;
+}
+
+div.parallaxslider div.slide div.bgoverlay{ /* CSS for each image's DIV container within main container */
+position: absolute;
+z-index: 0;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background-color: black;
+background-position: center center; /* center image within carousel */
+background-repeat: no-repeat;
+background-size: cover; /* CSS3 property to scale image within container? "cover" or "contain" */
+}
+
+div.parallaxslider div.selectedslide{ /* CSS for currently selected slide */
+}
+
+div.parallaxslider div.slide div.desc{ /* DIV that contains the textual description inside .slide */
+position: absolute;
+color: grey;    /*color font TEXT BOX*/
+padding: 8px;
+text-shadow: 0 -1px 1px #8a8a8a; /* CSS3 text shadow#8a8a8a */
+z-index:5;
+}
+
+ pointer-events: none; 
+/* keep this property intact. Disable pointer events on desc divs themselves  REMOVED FROM ABOVE*/
+
+
+div.parallaxslider div.slide div.desc {
+pointer-events: auto; /*keep this property intact. Enable pointer events on individual elements within desc divs, such as links*/
+}
+ 
+div.parallaxslider div.selectedslide div.desc{ /* CSS for currently selected slide's desc div */
+}
+
+
+div.parallaxslider div.slide div.desc a{
+color:yellow;
+text-decoration:none;
+}
+
+/* the style for the footer*/
+footer {
+	background-color: #282828;  /* to make footer almost black */
+	clear: both;
+/* 	clear: left; */
+}	
+
+/* the style for the footer text*/
+footer p {
+	text-align: center;
+	color: #dce2ea; 	/*text light blue*/
+	padding: 1em 0;
+}
+/* the style for privacy link in footer */
+footer p a {
+	color: #dce2ea; 
+}
